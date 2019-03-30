@@ -31,4 +31,6 @@ The main body is also used as a container, which contains the elements of my app
 
 >Part in the schedule, that is, course list, schedule, schedule, weekly schedule for next semester, this semester as mouse clicks and display different content, but the form of writing is not good enough, when to change the window size, the contents of the display offset, for mobile display unfriendly, some course name already is beyond the scope of their cell, are beautiful enough.
 
+![布局不合理](图片1.png)
+
 **my solution**：The layout can be reconfigured using bootstrap to add support for mobile display for better display results. At the same time, modify the external CSS file to make the display of relevant information more reasonable and beautiful.
