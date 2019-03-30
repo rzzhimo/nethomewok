@@ -1,4 +1,4 @@
-###简单使用
+### 简单使用
 ```
 项目用了maven管理和Junit进行单元测试
 src文件夹下main下的java文件夹中存有入口类main.class和WordLadder.class
