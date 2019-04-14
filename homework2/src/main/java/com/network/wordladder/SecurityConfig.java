@@ -26,9 +26,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .passwordEncoder(new BCryptPasswordEncoder())
-                .withUser("admin").password(new BCryptPasswordEncoder().encode("admin")).roles("ADMIN", "USER")
+                .withUser("user1").password(new BCryptPasswordEncoder().encode("user1")).roles("ADMIN", "USER")
                 .and()
-                .withUser("user").password(new BCryptPasswordEncoder().encode("user")).roles("USER");
+                .withUser("user2").password(new BCryptPasswordEncoder().encode("user2")).roles("USER");
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -38,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/actuator/**").hasRole("ADMIN")
-                .antMatchers("/generate", "/ladder").hasRole("USER")
+                .antMatchers( "/ladder").hasRole("USER")
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations())
                 .permitAll()
                 .antMatchers("/")
@@ -57,7 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         httpServletResponse.setContentType("application/json;charset=utf-8");
                         PrintWriter out = httpServletResponse.getWriter();
                         httpServletRequest.getSession().invalidate();
-                        out.write("{\"status\":200, \"message\": \"logout successfully\"}");
+                        out.write("{\"status\":200, \"message\": \"you haved logout successfully\"}");
                         out.flush();
                         out.close();
                     }
