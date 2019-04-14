@@ -1,4 +1,4 @@
-package com.network.wordladder;
+package com.network.wordladder.wordladder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -26,7 +26,7 @@ public class WordLadder {
 
     private void dicInit() {
 
-        String file = "src/main/java/com/network/wordladder/dict.txt";
+        String file = "src/main/java/com/network/wordladder/wordladder/dict.txt";
 
         try {
             if (file == "") {

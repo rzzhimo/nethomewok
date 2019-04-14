@@ -1,18 +1,13 @@
-package com.network.wordladder;
+package com.network.wordladder.wordController;
 
 
-import com.network.wordladder.WordLadder;
-import org.apache.catalina.connector.Response;
-import org.springframework.core.io.ClassPathResource;
+import com.network.wordladder.wordladder.WordLadder;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
-public class wordladderContraller {
+public class WordladderController {
 
 //    @RequestMapping("/word")
 //    @ResponseBody
