@@ -1,6 +1,5 @@
-package com.network.wordladder;
+package com.network.wordladder.wordconfiguration;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Configuration;
