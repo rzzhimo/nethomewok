@@ -1,4 +1,4 @@
-package com.network.wordladder;
+package com.network.wordladder.wordconfiguration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
