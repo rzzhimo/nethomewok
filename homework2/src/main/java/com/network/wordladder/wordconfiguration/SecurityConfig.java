@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
         auth.inMemoryAuthentication()
                 .passwordEncoder(new BCryptPasswordEncoder())
                 .withUser("user1").password(new BCryptPasswordEncoder().encode("user1")).roles("ADMIN", "USER")
@@ -35,6 +36,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         final LogoutConfigurer<HttpSecurity> httpSecurityLogoutConfigurer = http
                 .cors().and().csrf().disable()
                 .authorizeRequests()
+
+                .anyRequest().authenticated()
+
+
+
+                .antMatchers( "/home").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/actuator/**").hasRole("ADMIN")
                 .antMatchers( "/ladder").hasRole("USER")

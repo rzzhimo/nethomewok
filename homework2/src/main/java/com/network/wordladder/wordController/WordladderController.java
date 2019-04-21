@@ -9,19 +9,7 @@ import java.io.IOException;
 @RestController
 public class WordladderController {
 
-//    @RequestMapping("/word")
-//    @ResponseBody
-//    public Map<String,String> index(){
-//        WordLadder word = new WordLadder();
-//        String word1,word2;
-//
-//        String result = word.dfs("cat", "dog");
-//        Map map=new HashMap<String,String>();
-//        map.put("code","data");
-//        map.put("cat","dog");
-//        map.put("1",result);
-//        return map;
-//    }
+
     @RequestMapping(value = "/ladder", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     @ResponseBody
     public String ladder(@RequestParam("start") String start, @RequestParam("end") String end) throws IOException
