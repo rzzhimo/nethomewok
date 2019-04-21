@@ -8,14 +8,14 @@
 ![图片标题](img/6.jpeg)
 1、postman占用的内存如图 116.8mb  
 ![图片标题](img/5.jpeg)
-2、postman占用的cpu如图，2.3%左右
+2、postman占用的cpu如图，0.3%左右
 
 
 #### 在发一条请求时 
 ![图片标题](img/2.jpeg)
 postman占用的内存如图 127.4mb
 ![图片标题](img/1.jpeg)
-postman占用的cpu如图，0.3%左右
+postman占用的cpu如图，2.3%左右
 
 #### 在发多条请求时（手动发送20条） 
 连续发送http://localhost:8080/ladder?start=cat&end=dog
