@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-@CrossOrigin("*")
+@CrossOrigin("*")//允许所有的跨域请求
 @Controller
 @RequestMapping("/wordladder")
 public class WordLadderController {

@@ -4,4 +4,4 @@ VOLUME /tmp
 COPY target/*.jar app.jar
 ADD dict.txt dict.txt
 ENTRYPOINT ["java","-jar","/app.jar"]
-EXPOSE 9091
+EXPOSE 8086
